@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="move_forward" sid="315015845712532" static="0" type="number">0</variable>
+        <event-block sid="504557539463295">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="686941026446331" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="12" name="Set world gravity" sid="951376150612354" type="Astronaut">
+                    <param id="0" name="Gravity">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="911911215083749">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="264544125001381" type="System">
+                            <param id="0" name="Count">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="386843914902949" type="System">
+                            <param id="0" name="Object to create">Asteroid</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="156943899632615">
+            <conditions>
+                <condition id="-18" name="On created" sid="690000847218542" type="Astronaut" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="417965664863937" type="Astronaut">
+                    <param id="0" name="X">random(0+Astronaut.Width, WindowWidth-Astronaut.Width)</param>
+                    <param id="1" name="Y">random(0+Astronaut.Height, WindowHeight-Astronaut.Height)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="130973382034064">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="909016825488658" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+                <condition id="6" name="On button pressed" sid="935715377816910" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="887637898172679">
+                    <conditions>
+                        <condition behavior="Physics" id="1" name="Compare velocity" sid="994698372144735" type="Astronaut">
+                            <param id="0" name="Which">2</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="554442254878704" type="System">
+                            <param id="0" name="Variable">move_forward</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="220122153158696">
+            <conditions>
+                <condition id="3" name="On key released" sid="510191560585266" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+                <condition id="7" name="On button released" sid="882263415498083" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="205827268350464" type="System">
+                    <param id="0" name="Variable">move_forward</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="858700335065078">
+            <conditions>
+                <condition id="2" name="Key is down" sid="975937775726362" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="5" name="Compare axis" sid="922634909733921" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">0</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Rotate clockwise" sid="951979563425000" type="Astronaut">
+                    <param id="0" name="Degrees">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="689081786674302">
+            <conditions>
+                <condition id="2" name="Key is down" sid="299757391662335" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="5" name="Compare axis" sid="100723806195549" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">0</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-19" name="Rotate counter-clockwise" sid="609832209633687" type="Astronaut">
+                    <param id="0" name="Degrees">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="879445390965119">
+            <conditions>
+                <condition id="-18" name="On created" sid="715172657089859" type="Asteroid" />
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="281632790884631" type="Asteroid">
+                    <param id="0" name="Scale">random(0.1, 1)</param>
+                </action>
+                <action id="-3" name="Set position" sid="711968699327073" type="Asteroid">
+                    <param id="0" name="X">random(0, WindowWidth)</param>
+                    <param id="1" name="Y">random(0, WindowHeight)</param>
+                </action>
+                <action behavior="Physics" id="16" name="Set density" sid="498582601571820" type="Asteroid">
+                    <param id="0" name="Density">0.1 * asteroid.Width</param>
+                </action>
+                <action behavior="Physics" id="4" name="Apply impulse towards position" sid="502082018857491" type="Asteroid">
+                    <param id="0" name="Impulse">random(0, 1)</param>
+                    <param id="1" name="X">random(0, WindowWidth)</param>
+                    <param id="2" name="Y">random(0, WindowHeight)</param>
+                    <param id="3" name="Image point">0</param>
+                </action>
+                <action behavior="Physics" id="7" name="Apply torque towards angle" sid="185035190600107" type="Asteroid">
+                    <param id="0" name="Torque">random(0, 1)</param>
+                    <param id="1" name="Angle">random(0, 360)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="168570748891890">
+            <conditions>
+                <condition id="-18" name="On created" sid="608782565523092" type="Particles" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="500261955181509" type="Particles">
+                    <param id="0" name="Pin to">Astronaut</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="267238188909963" type="Astronaut">
+                    <param id="0" name="Object">Astronaut</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="512906634965714">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="578422444981664" type="System">
+                    <param id="0" name="First value">move_forward</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="2" name="Apply force at angle" sid="851734307475257" type="Astronaut">
+                    <param id="0" name="Force">1</param>
+                    <param id="1" name="Angle">Astronaut.Angle</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Set spraying" sid="377127534183282" type="Particles">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="298717766952137">
+            <conditions>
+                <condition id="-22" name="Else" sid="752438993681891" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set spraying" sid="873279454614856" type="Particles">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="683177997924265">
+            <conditions>
+                <condition id="-18" name="On created" sid="911645386371487" type="Pliers" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="547154144791964" type="Pliers">
+                    <param id="0" name="X">random(0, WindowWidth)</param>
+                    <param id="1" name="Y">random(0, WindowHeight)</param>
+                </action>
+                <action behavior="Physics" id="16" name="Set density" sid="610303726325637" type="Pliers">
+                    <param id="0" name="Density">0.1 * Pliers.Width</param>
+                </action>
+                <action behavior="Physics" id="4" name="Apply impulse towards position" sid="356394040063379" type="Pliers">
+                    <param id="0" name="Impulse">random(0, 0.1)</param>
+                    <param id="1" name="X">random(0, WindowWidth)</param>
+                    <param id="2" name="Y">random(0, WindowHeight)</param>
+                    <param id="3" name="Image point">0</param>
+                </action>
+                <action behavior="Physics" id="7" name="Apply torque towards angle" sid="367929603571939" type="Pliers">
+                    <param id="0" name="Torque">random(0, 1)</param>
+                    <param id="1" name="Angle">random(0, 360)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="952931656318613">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="530050185812846" type="Astronaut">
+                    <param id="0" name="Object">Pliers</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="342929782869862" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

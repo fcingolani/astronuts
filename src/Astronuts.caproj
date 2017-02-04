@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Astronuts</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://fcingolani.com.ar/astronuts</author-website>
+    <app-id>ar.com.fcingolani.astronuts</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>23900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Layout 1</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Astronaut" sid="384940543529467">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="246453680331654">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="742118902590639" speed="5">
+                    <frame duration="1" hotspotX="0.502158" hotspotY="0.508547" original-source="F:\White Duke\Downloads\astronaut-clip-art-images-free-for-commercial-use-BlG9Cn-clipart.png">
+                        <collision-poly>
+                            <point x="0.864748" y="0.0754986" />
+                            <point x="0.998561" y="0.508547" />
+                            <point x="0.856835" y="0.925926" />
+                            <point x="0.502158" y="0.974359" />
+                            <point x="0.195683" y="0.830484" />
+                            <point x="0.153957" y="0.508547" />
+                            <point x="0.195683" y="0.18661" />
+                            <point x="0.502158" y="0.025641" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="915094987365893">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Asteroid" sid="256137987523251">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="341031307818316">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="883373315061910" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\White Duke\Downloads\asteroid.png">
+                        <collision-poly>
+                            <point x="0.171875" y="0.171875" />
+                            <point x="0.5" y="0" />
+                            <point x="0.84375" y="0.15625" />
+                            <point x="0.992188" y="0.5" />
+                            <point x="0.851563" y="0.851563" />
+                            <point x="0.5" y="0.96875" />
+                            <point x="0.148438" y="0.851563" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Gamepad" sid="392957598778386">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="Particles" sid="871637906186817">
+            <plugin id="Particles" />
+            <behaviors>
+                <behavior-type name="Pin" sid="156867157346070">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="space_stars_blue_background_80369_1920x" sid="292175947603208">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="264193152104550" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\White Duke\Downloads\space_stars_blue_background_80369_1920x1080.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Pliers" sid="151868847392362">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="236122565112682">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="321587101094213" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\White Duke\Downloads\48201-pliers-tool-repair-equipment-isolated-metal-handyman-diy-improvement-maintenance-build-service-renovation-fix-worker-steel-free-vector-graphics-free-illustrations-free-images-royalty-free-768x610.png">
+                        <collision-poly>
+                            <point x="0.364583" y="0.459016" />
+                            <point x="0.5" y="0.234426" />
+                            <point x="0.576823" y="0.532787" />
+                            <point x="0.778646" y="0.5" />
+                            <point x="0.690104" y="0.609836" />
+                            <point x="0.5" y="0.681967" />
+                            <point x="0.169271" y="0.786885" />
+                            <point x="0.348958" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="233150878932607">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="410418918419425">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="512838245501958" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+        <layout>Protos.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="1" />
+        <global-instance type="Gamepad" uid="10">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
